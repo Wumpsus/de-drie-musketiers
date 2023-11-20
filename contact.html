@@ -27,6 +27,20 @@
         <h1>Welkom op onze website</h1>
         <p>Deze website is gemaakt vanuit een opdracht van school</p>
         <p>Het doel van deze website is om u te laten zien wat wij voor games kunnen maken!</p>
+
+        <!-- Contactformulier -->
+        <form action="process.php" method="post">
+            <label for="name">Naam:</label>
+            <input type="text" id="name" name="name" required>
+<br>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+<br>
+            <label for="message">Bericht:</label>
+            <textarea id="message" name="message" rows="1" required></textarea>
+
+            <input type="submit" value="Verstuur">
+        </form>
     </div>
 
 </body>
