@@ -47,65 +47,68 @@
     </div>
 
     <h1 class="h1-bg">Yvan</h1>
-<p>Hallo,</p> 
-<p>Ik ben Yvan van Dijk en ik ben 16 jaar oud, Ik woon samen mijn met ouders en met mijn zus.</p> 
-<p>Ik doe momenteel de opleinding niveau 4 SOD (Software Development).</p>
-<p>Ik heb voor deze opleinding gekozen omdat ik mijzelf wil verdiepen in coderen en ik denk dat dit de beste start leek voor mij.</p>
-<p>Ik heb zelf al best wat ervaring met coderen, maar op mijn oude school als ik een vraag had, werd ik genegeert. Ik hoop dat ik hier goed wordt geholpen als ik vragen heb.</p>
-<br>
-<p>Mijn hobby's zijn:</p>
-<ul id="some_shit">
-    <li>Coderen</li>
-    <li>Badmintonen</li>
-    <li>Eten</li>
-
-</ul>
-<p>Ik game best vaak op een dag, vooral met vrienden speel ik Sea Of Thieves en GTA V.</p>
-<p>Ook vind ik het coderen leuk om soms even te doen als ik mij verveel
+    <input type="hidden" id="myInput" value="Ik ben Yvan van Dijk en ik ben 16 jaar oud, Ik woon samen mijn met ouders en met mijn zus.
+    Ik doe momenteel de opleinding niveau 4 SOD (Software Development). Ik heb voor deze opleinding gekozen omdat 
+    ik mijzelf wil verdiepen in coderen en ik denk dat dit de beste start leek voor mij. Ik heb zelf al best wat ervaring met coderen, maar op mijn
+     oude school als ik een vraag had, werd ik genegeert. Ik hoop dat ik hier goed wordt geholpen als ik vragen heb.">
+     <button onclick="getInputValue()">wie ben ik</button>
+<button onclick="hideInputValue()">Hide Value</button>
+<p id="demo"></p>
+<button onclick="getInputValue2()">wat zijn mijn hobbies</button>
+<button onclick="hideInputValue2()">Hide Value</button>
+<p id="demo2"></p>
+<input type="hidden" id="myInput" value="Ik game best vaak op een dag, vooral met vrienden speel ik Sea Of Thieves en GTA V.
+Ook vind ik het coderen leuk om soms even te doen als ik mij verveel
 ook doe ik badminton momenteel speel ik bij de senioren bij de club PBC boomgaardshoek. Ik ben een keer kampieon geworden
-ik vind eten ook geweldig, mijn bijnaam thuis is de prullebak.</p>
-<table>
-    <tr>
-        <th></th>
-        <th>Beste hobby</th>
-        <th>waarom</th>
-        <th>wat doet<br> het met mij</th>
-    </tr>
-    <tr>
-        <th>1#</th>
-        <td rowspan="2">badminton</td>
-        <td>spelen is <br>gewoon geweldig</td>
-        <td>het maakt mij blij</td>
-    </tr>
-    <tr>
-        <th>2#</th>
-        <td>training</td>
-        <td>maakt mij blij</td>
-    </tr>
-    <tr>
-        <th>3#</th>
-        <td colspan="3">ik hou van mij leven :)</td>
-    </tr>
-    <tr>
-        <th>4#</th>
-        <td>gamen</td>
-        <td>je ben<br> even weg</td>
-        <td>het laat <br>tijd voorbij vliegen</td>
-    </tr>
-    <tr>
-        <th>5#</th>
-        <td>eten</td>
-        <td>het is lekker</td>
-        <td>maakt mij<br> heel erg blij</td>
-    </tr>
-</table>
+ik vind eten ook geweldig, mijn bijnaam thuis is de prullebak.">
 
-<img src="img/kampioen foto.jpg" alt="yvan zijn kampieon foto" width="550" height="350">
-<video controls width="360" height="360">
-    <source src="img/VID20230722212524 (1).mp4" type="video/mp4">
-</video>
-    <video controls width="360" height="360">
+
+<menu class="buttonmenu">
+<button onclick="showElement('foto')">Show Image & Videos</button>
+<button onclick="hideElement('foto')">Hide Image & Videos</button>
+</menu>
+<div id="foto" style="display: none;">
+    <img id="image" src="img/kampioen foto.jpg" alt="yvan zijn kampioen foto" width="550" height="350">
+    <video id="video1" controls width="360" height="360">
+        <source src="img/VID20230722212524 (1).mp4" type="video/mp4">
+    </video>
+    <video id="video2" controls width="360" height="360">
         <source src="img/hq5rkdf52WgiPBhGpAGhLg.mp4" type="video/mp4">
-        </video>  
+    </video>
+</div>
+
+        <script>
+            function getInputValue() {
+              var x = document.getElementById("myInput").value;
+              document.getElementById("demo").innerHTML = x;
+            }
+            
+            function hideInputValue() {
+              document.getElementById("demo").innerHTML = "";
+            }
+
+            function getInputValue2() {
+              var x = document.getElementById("myInput").value;
+              document.getElementById("demo2").innerHTML = x;
+            }
+            function hideInputValue2() {
+              document.getElementById("demo2").innerHTML = "";
+            }
+
+            function showElement(elementId) {
+    var element = document.getElementById(elementId);
+    if (element) {
+        element.style.display = "block";
+    }
+}
+
+function hideElement(elementId) {
+    var element = document.getElementById(elementId);
+    if (element) {
+        element.style.display = "none";
+    }
+}
+            
+            </script>
 </body>
 </html>
