@@ -112,3 +112,10 @@ body {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+#foto {
+    display: none;
+    color: red;
+}
+.buttonmenu {
+    border: 5px #AA0000;
+}
