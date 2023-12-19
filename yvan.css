@@ -116,6 +116,24 @@ body {
     display: none;
     color: red;
 }
-.buttonmenu {
-    border: 5px #AA0000;
+.page {
+    text-align: center;
+    color: red;
+
+}
+.button-container {
+    border: 5px solid black;
+    background-color: indigo;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+button {
+    border: 2px solid palevioletred; /* Voeg een groene border toe aan de knoppen */
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
 }
