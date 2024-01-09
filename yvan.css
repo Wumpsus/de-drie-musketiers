@@ -137,3 +137,11 @@ button {
     margin: 5px;
     cursor: pointer;
 }
+.text {
+    font-size: 16px;
+    justify-content: center;
+    text-align: center;
+}
+.list {
+    list-style-type: none;
+}
