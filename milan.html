@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="yvan.css">
+    <link rel="stylesheet" href="milan.css">
 </head>
 <body>
     <div class="navbar">
@@ -45,5 +45,41 @@
             <a href="contact.html">Contact</a>
         </div>
     </div>
-</body>
+    <div class="button-menu">
+        <h1>Menu</h1>
+        <button onclick="showDiv('intro')">Toon Introductie</button>
+        <button onclick="hideDiv('intro')">Verberg Introductie</button>
+        <button onclick="showDiv('hobby')">Toon Hobby's</button>
+        <button onclick="hideDiv('hobby')">Verberg Hobby's</button>
+        <button onclick="showDiv('foto')">Toon Foto's & Videos</button>
+        <button onclick="hideDiv('foto')">Verberg Foto's & Videos</button>
+    </div>    
+    <div class="intro" id="intro">
+      <h1>Milan van Deelen</h1>  
+      <p> Hallo! Ik ben Milan van Deelen, en ik ben 17 jaar oud. Ik woon alleen bij mijn Moeder.</p>
+      <p>Ik doe op het moment een opleiding: Software Development, en daarnaast ben ik ook vrijwilliger voor een game bedrijf als Systeem Admin.</p>
+      <p>Ik doe deze opleiding omdat ik me vanaf jongs af aan geinteresseerd heb in Development & Coderen, en alles binnen de ICT. En wil mezelf hier meer in verdiepen.</p>
+    </div>
+    <div class="hobby" id="hobby">
+      <h2>Hobby's:</h2>
+      <p>Net zoals elk normaal mens heb ik ook een aantal hobby's! Dit zijn ze:</p>
+      <p>Voetbal</p>
+      <p>Gamen</p>
+      <p>Wandelen</p>
+      <br>
+      <p>Mijn intresse in de Game Development is erg hoog, daarom ben ik ook bezig met een eigen server te maken binnen in een game!</p>
+    </div>
+
+<div class="foto" id="foto">
+<video controls width="360" height="360">
+    <source src="img/VID20230722212524 (1).mp4" type="video/mp4">
+</video>
+<img src="img/kampioen foto.jpg" alt="yvan zijn kampieon foto" width="550" height="350">
+    <video controls width="360" height="360">
+        <source src="img/hq5rkdf52WgiPBhGpAGhLg.mp4" type="video/mp4" >
+        </video>  
+    </div>
+    <script src="milan.js"></script>
+
+    </body>
 </html>
