@@ -99,3 +99,12 @@ body {
     display: block;
 }
 
+#pong-game {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#pongCanvas {
+    background-color: #000;
+    margin-top: 10px;
+}
