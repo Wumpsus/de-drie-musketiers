@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>snake game javascript</title>
     <link rel="stylesheet" href="yvan.css">
-</head>
+  </head>
 <body>
     <div class="navbar">
         <a href="https://www.techniekcollegerotterdam.nl/"><img class="pipi" src="img/tcrlogo.png" alt="TCR"></a>
@@ -44,6 +44,13 @@
             </div>
             <a href="contact.html">Contact</a>
         </div>
+    </div>
+    <div id="gameContainer">
+        <canvas id="gameBoard" width="500" height="500"></canvas>
+        <div id="scoreText">0</div>
+        <button id="resetBtn">Reset</button>
+    </div>
+    <script src="snake.js"></script>
     </div>
 </body>
 </html>
