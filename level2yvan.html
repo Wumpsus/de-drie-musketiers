@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>snake game javascript</title>
     <link rel="stylesheet" href="yvan.css">
-</head>
+  </head>
 <body>
-    <div class="navbar">
+       <div class="navbar">
         <a href="https://www.techniekcollegerotterdam.nl/"><img class="pipi" src="img/tcrlogo.png" alt="TCR"></a>
         <div class="nav-links">
             <a href="index.html">Home</a>
@@ -19,6 +19,7 @@
                 <a href="#">Duck Hunt</a>
             </div>
         </div>
+
             <div class="dropdown">
                 <button class="dropbtn">Over Ons</button>
                 <div class="dropdown-content">
@@ -45,25 +46,17 @@
             <a href="contact.html">Contact</a>
         </div>
     </div>
-
-    <header>
-        <h1>Waarom Ik Voor Pong Heb Gekozen</h1>
-    </header>
-
-    <section>
-        <p>Beste liefhebbers van spellen en programmeren,</p>
-    </section>
-
-    <section>
-        <p>Graag deel ik met jullie waarom ik ervoor heb gekozen om Pong te ontwikkelen. Het creëren van een Pong-game is niet alleen leuk om te spelen, maar biedt ook een boeiende en leerrijke ervaring die verschillende aspecten van programmeren en game-design omvat.</p>
-    </section>
-    <section>
-        <p>Allereerst is het ontwikkelen van Pong een uitstekende manier om mijn programmeervaardigheden te verbeteren. Het spel vereist kennis van gebruikersinteractie, logica voor het bewegen van objecten, score bijhouden en het afhandelen van game-events. Dit project biedt mij de kans om te groeien als ontwikkelaar en nieuwe programmeertechnieken uit te proberen.</p>
-
-        <p>Daarnaast heeft Pong een eenvoudige maar klassieke gameplay die zowel nieuwkomers als ervaren spelers aanspreekt. Het is een tijdloze klassieker die nostalgie oproept en tegelijkertijd een perfect platform biedt om te experimenteren met nieuwe gameplay-elementen.</p>
-    </section>
-    <section>
-        <p>Mijn doel met het maken van deze game is niet alleen het verbeteren van mijn eigen vaardigheden, maar ook om anderen te inspireren om zich te verdiepen in game-ontwikkeling. Games stimuleren creativiteit en probleemoplossend denken, en ik nodig iedereen uit om deel te nemen aan dit leerzame en plezierige avontuur.</p>
-
-        <p>Veel speelplezier!</p>
-        <p>Milan van Deelen</p>
+    <div class="levelcontainer">
+        <button><a href="gameyvan.html">level 1</a></button>
+        <br>
+        <button><a href="level2yvan.html">level 2</a></button>
+       </div>
+    <div id="gameContainer">
+        <canvas id="gameBoard" width="500" height="500"></canvas>
+        <div id="scoreText">0</div>
+        <button id="resetBtn">Reset</button>
+    </div>
+    <script src="level2.js"></script>
+    </div>
+</body>
+</html>

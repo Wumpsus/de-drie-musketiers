@@ -26,6 +26,24 @@ body {
     height: 100vh;
     color: red;
 }
+.levelcontainer {
+    border: 5px solid #000; 
+    padding: 10px;        
+    margin-top: 70px;      
+    margin-left: 70px;      
+    width: 200px;          
+    background-color: rgb(182, 98, 98);
+    position: absolute;    
+    top: 60px;             
+    left: 0;       
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;      
+    color: #000;
+    
+}
+
+
 
 .navbar {
      display: flex;
@@ -123,7 +141,7 @@ body {
 }
 .button-container {
     border: 5px solid black;
-    background-color: indigo;
+    background-color: rgb(182, 98, 98);
     padding: 10px;
     margin: 10px;
     display: flex;
@@ -132,14 +150,25 @@ body {
 }
 
 button {
-    border: 2px solid palevioletred; /* Voeg een groene border toe aan de knoppen */
+    border: 2px solid palevioletred;
     padding: 10px 20px;
     margin: 5px;
     cursor: pointer;
+    text-decoration: none; /* Verwijder onderstreping van de links */
+    color: #000; 
+}
+button a {
+    color: #000; /* Behoud de oorspronkelijke tekstkleur voor de linktekst */
+    text-decoration: none;
+}
+
+button:hover {
+    background-color: palevioletred; /* Voeg een achtergrondkleur toe wanneer de knop wordt gehoverd */
+    color: #fff; /* Tekstkleur wijzigen wanneer gehoverd */
 }
 #gameContainer{
     text-align: center;
-    background: #212837;
+   
 }
 #gameBoard{
     border: 3px solid;
