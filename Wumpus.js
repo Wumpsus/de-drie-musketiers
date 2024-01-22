@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (gameRunning) {
             score++;
             updateScore();
-            playSound("duck hit.mp3"); // Voeg het geluidseffect toe wanneer je op de eend klikt
+            playSound("duck hit.mp3"); // Geluidseffect voor als de eend gehit word
             resetDuckPosition();
         }
     });
@@ -35,12 +35,11 @@ document.addEventListener("DOMContentLoaded", function () {
         duck.style.top = `${randomY}px`;
 
         if (gameRunning) {
-            duck.style.display = 'block'; // Laat de eend zien als de game aan de gang is
+            duck.style.display = 'block'; // Eend
         }
     }
 
     function handleResize() {
-        // Update the position when the window is resized
         resetDuckPosition();
     }
 
@@ -50,8 +49,8 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!gameRunning) {
             startButton.disabled = true;
             stopButton.disabled = false;
-            playSound("quack.mp3"); // Voeg het startgeluidseffect toe
-            countdown(7000); // Start een cooldown van 7000 milliseconden (7 seconden) voordat het spel begint
+            playSound("start.mp3"); // Geluidseffect voor start
+            countdown(7000); // Cooldown van 7 sec, game start na deze cooldown (kan je aanpassen)
         }
     }
 
@@ -60,9 +59,9 @@ document.addEventListener("DOMContentLoaded", function () {
         stopButton.disabled = true;
         clearInterval(countdownTimer);
         gameRunning = false;
-        showGameOver(score); // Toon "Game over" met de eindscore
-        score = 0; // Reset de score naar nul
-        updateScore(); // Update de score op de pagina
+        showGameOver(score); // Zegt game over wanneer de game klaar is met de score er achter
+        score = 0; // Reset score
+        updateScore();
     }
 
     function playSound(soundFile) {
@@ -77,12 +76,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function startCountdown() {
-        gameRunning = true; // Zet gameRunning op true wanneer de game begint
-        resetDuckPosition(); // Initiële positie
-        updateScore(); // Zorg ervoor dat de score wordt bijgewerkt bij de start van het spel
+        gameRunning = true;
+        resetDuckPosition();
+        updateScore();
         countdownTimer = setTimeout(function () {
-            stopGame(); // Stop het spel na 10000 milliseconden (10 seconden)
-        }, 10000);
+            stopGame(); // Stopt spel na de tijd over is (kan je zelf aanpassen)
+        }, 15000); // <-- Pas het hier aan
     }
 
     function showGameOver(finalScore) {
