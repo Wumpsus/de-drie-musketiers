@@ -1,10 +1,7 @@
-// Elementen ophalen uit de DOM
 const gameBoard = document.querySelector("#gameBoard");
 const ctx = gameBoard.getContext("2d");
 const scoreText = document.querySelector("#scoreText");
 const resetBtn = document.querySelector("#resetBtn");
-
-// Constanten voor het spel
 const gameWidth = gameBoard.width;
 const gameHeight = gameBoard.height;
 const boardBackground = "white";
@@ -12,8 +9,6 @@ const snakeColor = "lightgreen";
 const snakeBorder = "black";
 const foodColor = "red";
 const unitSize = 25;
-
-// Variabelen voor het spel
 let running = false;
 let xVelocity = unitSize;
 let yVelocity = 0;
@@ -28,14 +23,11 @@ let snake = [
     {x:0, y:0}
 ];
 
-// Event listeners toevoegen
 window.addEventListener("keydown", changeDirection);
 resetBtn.addEventListener("click", resetGame);
 
-// Het spel starten
 gameStart();
 
-// Functie om het spel te starten
 function gameStart(){
     running= true;
     scoreText.textContent = score;
@@ -43,8 +35,6 @@ function gameStart(){
     drawFood();
     nextTick();
 };
-
-// Functie voor de game loop
 function nextTick(){
     if(running){
         setTimeout(()=>{
@@ -60,35 +50,28 @@ function nextTick(){
         displayGameOver();
     }
 };
-
-// Functie om het speelveld te wissen
 function clearBoard(){
     ctx.fillStyle = boardBackground;
     ctx.fillRect(0, 0, gameWidth, gameHeight);
 };
-
-// Functie om voedsel te creëren
 function createFood(){
     function randomFood(min, max){
         const randNum = Math.round((Math.random() * (max - min) + min) / unitSize) * unitSize;
         return randNum;
     }
     foodX = randomFood(0, gameWidth - unitSize);
-    foodY = randomFood(0, gameHeight - unitSize);
+    foodY = randomFood(0, gameWidth - unitSize);
 };
-
-// Functie om voedsel te tekenen
 function drawFood(){
     ctx.fillStyle = foodColor;
     ctx.fillRect(foodX, foodY, unitSize, unitSize);
 };
-
-// Functie om de slang te laten bewegen
 function moveSnake(){
-    const head = {x: snake[0].x + xVelocity, y: snake[0].y + yVelocity};
+    const head = {x: snake[0].x + xVelocity,
+                  y: snake[0].y + yVelocity};
     
     snake.unshift(head);
-    // Als voedsel wordt gegeten
+    //if food is eaten
     if(snake[0].x == foodX && snake[0].y == foodY){
         score+=1;
         scoreText.textContent = score;
@@ -98,8 +81,6 @@ function moveSnake(){
         snake.pop();
     }     
 };
-
-// Functie om de slang te tekenen
 function drawSnake(){
     ctx.fillStyle = snakeColor;
     ctx.strokeStyle = snakeBorder;
@@ -108,8 +89,6 @@ function drawSnake(){
         ctx.strokeRect(snakePart.x, snakePart.y, unitSize, unitSize);
     })
 };
-
-// Functie om de richting te veranderen op basis van toetsenbordinvoer
 function changeDirection(event){
     const keyPressed = event.keyCode;
     const LEFT = 37;
@@ -141,8 +120,6 @@ function changeDirection(event){
             break;
     }
 };
-
-// Functie om te controleren of het spel is afgelopen
 function checkGameOver(){
     switch(true){
         case (snake[0].x < 0):
@@ -155,8 +132,8 @@ function checkGameOver(){
             running = false;
             break;
         case (snake[0].y >= gameHeight):
-            running = false;
-            break;
+                running = false;
+                break;
     }
     for(let i = 1; i < snake.length; i+=1){
         if(snake[i].x == snake[0].x && snake[i].y == snake[0].y){
@@ -164,8 +141,6 @@ function checkGameOver(){
         }
     }
 };
-
-// Functie om het game over scherm weer te geven
 function displayGameOver(){
     ctx.font = "50px MV Boli";
     ctx.fillStyle = "black";
@@ -173,8 +148,6 @@ function displayGameOver(){
     ctx.fillText("GAME OVER!", gameWidth / 2, gameHeight / 2);
     running = false;
 };
-
-// Functie om het spel te resetten
 function resetGame(){
     score = 0;
     xVelocity = unitSize;
