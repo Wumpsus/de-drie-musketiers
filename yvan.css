@@ -187,3 +187,9 @@ button:hover {
     border-radius: 15px;
     cursor: pointer;
 }
+.log {
+    border: 5px solid;
+    border-radius: 30px;
+    width: 150px;
+    
+    }

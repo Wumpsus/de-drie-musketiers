@@ -110,12 +110,17 @@ function drawSnake(){
 };
 
 // Functie om de richting te veranderen op basis van toetsenbordinvoer
+// Functie om de richting te veranderen op basis van toetsenbordinvoer
 function changeDirection(event){
     const keyPressed = event.keyCode;
     const LEFT = 37;
     const UP = 38;
     const RIGHT = 39;
     const DOWN = 40;
+    const KeyW = 87;
+    const KeyA = 65;
+    const KeyS = 83;
+    const KeyD = 68;
 
     const goingUp = (yVelocity == -unitSize);
     const goingDown = (yVelocity == unitSize);
@@ -139,8 +144,25 @@ function changeDirection(event){
             xVelocity = 0;
             yVelocity = unitSize;
             break;
+        case(keyPressed == KeyW && !goingDown):
+            xVelocity = 0;
+            yVelocity = -unitSize;
+            break;
+        case(keyPressed == KeyA && !goingRight):
+            xVelocity = -unitSize;
+            yVelocity = 0;
+            break;
+        case(keyPressed == KeyS && !goingUp):
+            xVelocity = 0;
+            yVelocity = unitSize;
+            break;
+        case(keyPressed == KeyD && !goingLeft):
+            xVelocity = unitSize;
+            yVelocity = 0;
+            break;
     }
 };
+
 
 // Functie om te controleren of het spel is afgelopen
 function checkGameOver(){
@@ -176,6 +198,7 @@ function displayGameOver(){
 
 // Functie om het spel te resetten
 function resetGame(){
+    logAntwoord(score); // Add this line
     score = 0;
     xVelocity = unitSize;
     yVelocity = 0;
@@ -188,3 +211,15 @@ function resetGame(){
     ];
     gameStart();
 };
+function logAntwoord(score) {
+    var loglijst = document.getElementById("loglijst");
+    var listItem = document.createElement("li");
+    listItem.textContent = score; // Update this line
+    loglijst.appendChild(listItem);
+}
+
+
+function resetlog() {
+var loglijst = document.getElementById("loglijst");
+loglijst.innerHTML = "";
+}
