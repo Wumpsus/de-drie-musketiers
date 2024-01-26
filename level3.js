@@ -98,7 +98,7 @@ function createFood(){
 function drawblock(){    
         ctx.fillStyle = blockcolor;
         for(i=0; i<aantalblock; i++) {
-           //teken bloxY en blockx 
+           //teken bloxY en blockX 
            ctx.fillRect(blockX[i], blockY[i], unitSize, unitSize);   
         } 
 }
