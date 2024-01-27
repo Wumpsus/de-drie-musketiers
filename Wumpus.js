@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (gameRunning) {
             score++;
             updateScore();
-            playSound("duck hit.mp3"); // Geluidseffect voor als de eend gehit word
+            playSound("sfx/duck hit.mp3"); // Geluidseffect voor als de eend gehit word
             resetDuckPosition();
         }
     });
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!gameRunning) {
             startButton.disabled = true;
             stopButton.disabled = false;
-            playSound("start.mp3"); // Geluidseffect voor start
+            playSound("sfx/start.mp3"); // Geluidseffect voor start
             countdown(7000); // Cooldown van 7 sec, game start na deze cooldown (kan je aanpassen)
         }
     }
@@ -86,5 +86,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function showGameOver(finalScore) {
         alert(`Game over! Je eindscore: ${finalScore}`);
+        playSound("Loud Horn.mp3")
     }
 });
