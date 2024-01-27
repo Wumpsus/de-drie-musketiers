@@ -15,7 +15,7 @@ const unitSize = 25;
 
 // Variabelen voor het spel en initailspeed is 100 
 let running = false;
-let initialSpeed = 200;
+let initialSpeed = 150;
 let speed = initialSpeed;
 let xVelocity = unitSize;
 let yVelocity = 0;

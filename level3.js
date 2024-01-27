@@ -11,7 +11,7 @@ const boardBackground = "white";
 const snakeColor = "lightgreen";
 const snakeBorder = "black";
 const foodColor = "red";
-const blockcolor = "blue";
+const blockcolor = "darkgreen";
 const unitSize = 25;
 
 // Variabelen voor het spel
