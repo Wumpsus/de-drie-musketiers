@@ -1,11 +1,11 @@
 
 .h1-bg {
-    color: red;
+    color: white;
     padding: 5px;
     margin: 5px;
   }
   ul#some_shit {
-    color: red;
+    color: white;
     list-style-type: none;
   }
   #some_shit h2, #some_shit h3, #some_shit h4, #some_shit h5, #some_shit h6 {
@@ -24,7 +24,7 @@ body {
     background-size: cover;
     background-position: center;
     height: 100vh;
-    color: red;
+    color: white;
 }
 .levelcontainer {
     border: 5px solid #000; 

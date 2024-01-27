@@ -3,12 +3,12 @@ A:active {color: black ; text-decoration: none}
 A:visited {color: white ; text-decoration: none}
 A:hover {color: red; text-decoration: none}
 .h1-bg {
-    color: red;
+    color: white;
     padding: 5px;
     margin: 5px;
   }
   ul#some_shit {
-    color: red;
+    color: white;
     list-style-type: none;
   }
   #some_shit h2, #some_shit h3, #some_shit h4, #some_shit h5, #some_shit h6 {
@@ -27,7 +27,7 @@ body {
     background-size: cover;
     background-position: center;
     height: 100vh;
-    color: red;
+    color: white;
 }
 
 .navbar {
@@ -45,7 +45,7 @@ body {
 }
 
 .navbar a {
-    color: #AA0000;
+    color: white;
     text-decoration: solid;
     margin-right: 15px;
     font-family: Lato-Bold;
@@ -65,7 +65,7 @@ body {
     flex: 1;
     text-align: center;
     padding: 50px;
-    color: #ff1919;
+    color: white;
     background-color: rgba(0, 0, 0, 0.5);
     width: 400px;
     height: auto;
@@ -78,7 +78,7 @@ body {
 }
 
 .dropbtn {
-    color: #AA0000;
+    color: white;
     text-decoration: none;
     background-color: transparent;
     border: none;
@@ -99,7 +99,7 @@ body {
 }
 
 .dropdown-content a {
-    color: #AA0000;
+    color: white;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -126,7 +126,7 @@ h1, h2, h3, p, ul {
     text-align: center; 
   }
   p {
-    color: red;
+    color: white;
     padding:0px; 
     margin:0px;
     text-align: center;
