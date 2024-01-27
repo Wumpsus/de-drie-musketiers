@@ -94,7 +94,7 @@ function moveSnake() {
         score += 1;
         scoreText.textContent = score;
         createFood();
-        // Snelheid met 1 verminderd elke keer dat voedsel wordt gegeten
+        // Snelheid met 5 verminderd elke keer dat voedsel wordt gegeten
         speed -= 5;
     } else {
         snake.pop();
