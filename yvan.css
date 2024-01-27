@@ -33,7 +33,7 @@ body {
     margin-left: 70px;      
     width: 200px;          
     background-color: rgb(182, 98, 98);
-    position: absolute;    
+    position: absolute;     
     top: 60px;             
     left: 0;       
     display: flex;
@@ -60,7 +60,7 @@ body {
 }
 
 .navbar a {
-    color: #AA0000;
+    color: white;
     text-decoration: solid;
     margin-right: 15px;
     font-family: Lato-Bold;
@@ -80,7 +80,7 @@ body {
     flex: 1;
     text-align: center;
     padding: 50px;
-    color: #ff1919;
+    color: white;
     background-color: rgba(0, 0, 0, 0.5);
     width: 400px;
     height: auto;
@@ -93,7 +93,7 @@ body {
 }
 
 .dropbtn {
-    color: #AA0000;
+    color: white;
     text-decoration: none;
     background-color: transparent;
     border: none;
@@ -114,7 +114,7 @@ body {
 }
 
 .dropdown-content a {
-    color: #AA0000;
+    color: white;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -132,11 +132,11 @@ body {
 }
 #foto {
     display: none;
-    color: red;
+    color: white;
 }
 .page {
     text-align: center;
-    color: red;
+    color: white;
 
 }
 .button-container {
@@ -187,3 +187,9 @@ button:hover {
     border-radius: 15px;
     cursor: pointer;
 }
+.log {
+    border: 5px solid;
+    border-radius: 30px;
+    width: 150px;
+    
+    }

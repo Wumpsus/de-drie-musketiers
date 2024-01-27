@@ -62,7 +62,7 @@ button {
 }
 
 .navbar a {
-  color: #AA0000;
+  color: white;
   text-decoration: solid;
   margin-right: 15px;
   font-family: Lato-Bold;
@@ -93,7 +93,7 @@ button {
 }
 
 .dropbtn {
-  color: #AA0000;
+  color: white;
   text-decoration: none;
   background-color: transparent;
   border: none;
@@ -113,7 +113,7 @@ button {
 }
 
 .dropdown-content a {
-  color: #AA0000;
+  color: white;
   padding: 12px 16px;
   text-decoration: none;
   display: block;

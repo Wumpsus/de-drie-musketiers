@@ -1,6 +1,6 @@
 
 .intro {
-    color: rgba(250, 0, 0, 0.726);
+    color: white;
     padding: 5px;
     margin: 5px;
     text-align: center;
@@ -9,7 +9,7 @@
   }
 
   .foto {
-    color: red;
+    color: white;
     padding: 5px;
     margin: 5px;
     text-align: center;
@@ -17,7 +17,7 @@
     
   }
 .hobby {
-    color: rgba(250, 0, 0, 0.726);
+    color: white;
     padding: 5px;
     margin: 5px;
     text-align: center;
@@ -65,7 +65,7 @@ body {
     background-size: cover;
     background-position: center;
     height: 100vh;
-    color: red;
+    color: white;
 }
 
 .navbar {
@@ -83,7 +83,7 @@ body {
 }
 
 .navbar a {
-    color: #AA0000;
+    color: white;
     text-decoration: solid;
     margin-right: 15px;
     font-family: Lato-Bold;
