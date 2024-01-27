@@ -80,7 +80,7 @@ button {
   flex: 1;
   text-align: center;
   padding: 50px;
-  color: #ff1919;
+  color: white;
   background-color: rgba(0, 0, 0, 0.5);
   width: 400px;
   height: auto;
@@ -133,7 +133,7 @@ h1, h2, h3, p, ul {
   text-align: center; 
 }
 p {
-  color: red;
+  color: white;
   padding:0px; 
   margin:0px;
   text-align: center;
