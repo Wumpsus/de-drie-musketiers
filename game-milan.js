@@ -1,4 +1,14 @@
 const canvas = document.getElementById('pongCanvas');
+function generateScoreboard() {
+    const scoreboard = document.createElement('div');
+    scoreboard.innerHTML = `<h2>Scoreboard</h2><p>Player: ${playerName}</p><p>Score: ${playerScore}</p>`;
+    document.body.appendChild(scoreboard);
+}
+
+function endGame() {
+    generateScoreboard();
+    // rest of your endGame code...
+}
 const ctx = canvas.getContext('2d');
 
 const paddleWidth = 10, paddleHeight = 100;
